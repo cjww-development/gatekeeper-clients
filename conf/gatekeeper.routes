@@ -1,0 +1,12 @@
+GET         /client                             controllers.ReadController.fetchClient()
+GET         /client/details                     controllers.ReadController.fetchClientDetails()
+GET         /clients                            controllers.ReadController.fetchOwnedClients(groups_of: Int ?= 5)
+#TODO: Create route
+POST        /clients/details                    controllers.ReadController.fetchClientsDetails()
+
+POST        /client                             controllers.CreateController.createClient()
+
+PATCH       /client                             controllers.UpdateController.updateClient()
+PATCH       /client/regenerate-credentials      controllers.UpdateController.regenerateCredentials()
+
+DELETE      /client                             controllers.DeleteController.deleteClient()
